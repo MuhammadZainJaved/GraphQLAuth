@@ -1,0 +1,94 @@
+# # # query {
+# # #   users{
+# # #     edges{ # collection of objects get fetched
+# # #       node{ # each edge should have some data hence node
+# # #         username # Each node will contain a username
+# # #         email # Each node will contain a email
+# # #       }
+# # #     }
+# # #   }
+# # # }
+
+# # # query{
+# # #   me {
+# # #     isStaff
+# # #   }
+# # # }
+
+# # # mutation {
+# # #   register(
+# # #     username:"test3",
+# # #     email:"test3@admin.com",
+# # #     password1:"zain@123",
+# # #     password2:"zain@123"
+# # #   )
+# # #   {
+# # #     token
+# # #     success
+# # #     refreshToken
+# # #     errors
+# # #   }
+# # # }
+# # # mutation {
+# # #   verifyAccount(token:"eyJ1c2VybmFtZSI6InRlc3QzIiwiYWN0aW9uIjoiYWN0aXZhdGlvbiJ9:1pHKMO:iOR_ytqEtcqhiuUPpsBFogzsLnGqB9ycP2mpXZ2Bxyk")
+# # #   {
+# # #   	success
+# # #     errors
+# # #   }
+# # # }
+
+# # # mutation {
+# # #   tokenAuth(username:"admin", password:"admin") {
+# # #     success
+# # #     token
+# # #     refreshToken
+# # #     user{
+# # #       username
+# # #       email
+# # #     }
+# # #   }
+# # # }
+
+# # # mutation {
+# # #   updateAccount(firstName:"admin"){
+# # #     success
+# # #     errors
+# # #   }
+# # # }
+
+# # mutation {
+# #   resendActivationEmail(email:"test2@admin.com"){
+# #     # success
+# #     errors
+# #   }
+# # }
+# mutation {
+#   sendPasswordResetEmail(email:"test2@admin.com"){
+#     errors
+#     # success
+#   }
+# }
+mutation{
+  passwordReset(
+    token:"eyJ1c2VybmFtZSI6InRlc3QyIiwiYWN0aW9uIjoicGFzc3dvcmRfcmVzZXQifQ:1pHLsP:npsLEygnOYdWcFJ6LMm85PsIC7WY3jOAx9_ILQkDrlg",
+    newPassword1: "zain@321",
+    newPassword2: "zain@321"
+  ){
+    success
+    errors
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
